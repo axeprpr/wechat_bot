@@ -20,7 +20,7 @@ bot = Bot(console_qr=True)
 
 def monitor(msg_to, msg_type, msg):
     if msg_to=="" or msg=="":
-        return
+        return "Invalid request..."
     msg_type_dict = {'info' : '[INFO]',
                     'warning': '[WARNING]',
                     'error': '[ERROR!]'}
@@ -59,7 +59,7 @@ def auto_accept_friends(msg):
 @app.route("/gitlab/", methods=["GET", "POST"])
 def msg_from_gitlab():
     c = request.get_json()
-    return atx_nlp.hook(bot, 'gitlab', c)
+    return atx_nlp.hook(bot, 'gitlab', c, "Axe")
 
 ## monitor is a reserved and decoupled api. forward message to somebody without handle.
 @app.route('/monitor', methods=['GET','POST'])
@@ -77,7 +77,4 @@ def msg():
     return result
 
 if __name__ == '__main__':
-    if not sys.argv[0] or int(sys.argv[0]) >= 65535: 
-        app.run(debug=False, port=666, host="0.0.0.0")
-    else:
-        app.run(debug=False, port=sys.argv[0], host="0.0.0.0")
+    app.run(debug=False, port=666, host="0.0.0.0")
