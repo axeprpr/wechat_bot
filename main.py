@@ -59,7 +59,7 @@ def auto_accept_friends(msg):
 @app.route("/gitlab/", methods=["GET", "POST"])
 def msg_from_gitlab():
     c = request.get_json()
-    return atx_nlp.hook(bot, 'gitlab', c, "Axe")
+    return atx_nlp.hook(bot, 'gitlab', 'Axe', c)
 
 ## monitor is a reserved and decoupled api. forward message to somebody without handle.
 @app.route('/monitor', methods=['GET','POST'])
