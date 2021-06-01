@@ -115,7 +115,7 @@ singledispatch==3.4.0.3
 six==1.4.1
 sshuttle==0.78.4
 tornado==5.0.2
-urllib3==1.22
+urllib3==1.26.5
 wakeonlan==1.1.6
 web.py==0.39
 Werkzeug==0.15.4
