@@ -10,7 +10,7 @@ bonjour-py==0.3
 bottle==0.12.16
 bottle-websocket==0.2.9
 bs4==0.0.1
-certifi==2018.4.16
+certifi==2022.12.7
 chardet==3.0.4
 Click==7.0
 configparser==3.5.0
